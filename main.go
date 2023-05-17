@@ -5,10 +5,10 @@ import (
 	"github.com/joho/godotenv/cmd/godotenv"
 )
 
+// must run on first download
+// go mod init 
 // go get github.com/joho/godotenv/cmd/godotenv
 // go get github.com/openai/openai-go/v2
-
-
 
 func main() {
 	err := godotenv.Load()
