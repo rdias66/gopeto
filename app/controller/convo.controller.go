@@ -7,8 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/openai/openai-go/v2"
 
-	"github.com/yourusername/projectname/database"
-	"github.com/yourusername/projectname/models"
+	//"github.com/rdias/gopeto/database" to be made
+	"github.com/rdias66/gopeto/app/models/models.schema.go"
 )
 
 type ConvoController struct {
@@ -41,10 +41,7 @@ func (ConvoController *ConvoController) CreateConvo(Context *gin.Context) {
 		ModelOutput: modelResponse,
 		Timestamp:   time.Now(),
 	}
-	if err := database.CreateConvo(&convo); err != nil {
-		Context.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create conversation"})
-		return
-	}
+	//store it here. to be made
 
 	// Return the model response in the API response
 	Context.JSON(http.StatusOK, gin.H{"model_response": modelResponse})
