@@ -1,4 +1,0 @@
-package gopeto 
-
-func gopeto(){
-}
