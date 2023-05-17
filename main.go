@@ -10,6 +10,11 @@ import (
 
 
 func main() {
-	openaiClient := openai.NewClient("YOUR_API_KEY")
+	err := godotenv.Load()
+  	if err != nil {
+  	 	log.Fatal("Error loading .env file")
+  	}
+	
+	openaiClient := openai.NewClient(os.Getenv("YOUR_API_KEY"))
 	// ...
 }
