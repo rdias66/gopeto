@@ -2,9 +2,10 @@ package main
 
 import (
 	"github.com/openai/openai-go/v2"
+	"github.com/joho/godotenv/cmd/godotenv"
 )
 
-// go get go get github.com/joho/godotenv/cmd/godotenv
+// go get github.com/joho/godotenv/cmd/godotenv
 // go get github.com/openai/openai-go/v2
 
 
