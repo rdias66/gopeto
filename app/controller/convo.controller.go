@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/openai/openai-go/v2"
-
+	"github.com/google/uuid"
 	//"github.com/rdias/gopeto/database" to be made
 	"github.com/rdias66/gopeto/app/models/models.schema.go"
 )
@@ -37,6 +37,7 @@ func (ConvoController *ConvoController) CreateConvo(Context *gin.Context) {
 
 	// Store the conversation in the database
 	convo := models.Convo{
+		Id:   	     uuid.New(),
 		UserInput:   userInput,
 		ModelOutput: modelResponse,
 		Timestamp:   time.Now(),
