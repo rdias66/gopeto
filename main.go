@@ -26,15 +26,15 @@ func main() {
 	}
 }
 
-func dataToJson (input string) string {
+func DataToJson (input string) string {
 	return preMadeQuestion := os.Getenv("DATA_TO_JSON_CONTEXT") + input 
 }
 
-func dataToExcelFormat (input string) string {
+func DataToExcelFormat (input string) string {
 	return preMadeQuestion := os.Getenv("DATA_TO_EXCEL_CONTEXT") + input 
 }
 
-func postRequest (promptInput string) string {
+func PostRequest (promptInput string) string {
 	prompt := promptInput
 	conversation := []string{prompt}
 
