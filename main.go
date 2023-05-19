@@ -7,7 +7,7 @@ import (
 
 // go get github.com/joho/godotenv/cmd/godotenv
 // go get github.com/openai/openai-go/v2
-
+// go get github.com/google/uuid
 
 
 func main() {
