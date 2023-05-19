@@ -15,6 +15,15 @@ func main() {
   	if err != nil {
   	 	log.Fatal("Error loading .env file")
   	}	
+	userChoice := ""
+	userInput  := ""
+	
+	if userChoice == "data to Json" {
+		requestResponse := postRequest(dataToJson(userInput))
+	}
+	if userChoice == "data to Excel" {
+		requestResponse := postRequest(dataToExcel(userInput))
+	}
 }
 
 func dataToJson (input string) string {
