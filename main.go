@@ -34,7 +34,7 @@ func DataToExcelFormat (input string) string {
 	return preMadeQuestion := os.Getenv("DATA_TO_EXCEL_CONTEXT") + input 
 }
 
-func PostRequest (promptInput string) string {
+func PostRequest (promptInput string) string { // not tested
 	prompt := promptInput
 	conversation := []string{prompt}
 
